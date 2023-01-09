@@ -1,2 +1,3 @@
 # Prueba_Codigo_CV
-Ejemplos de código
+
+Se presenta ejemplos de códigos de Python y Stata junto a un proyecto realizado el ArcGis.
