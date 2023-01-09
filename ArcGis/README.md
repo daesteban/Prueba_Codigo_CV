@@ -4,3 +4,5 @@ Se utilizo datos georreferenciados de la Red Vial Nacional 2018 publicados por e
 
 El trabajo se realizó enteramente en **ArcGis**.
 El producto final de tal proyecto es https://github.com/dest18/Prueba_Codigo_CV/blob/main/ArcGis/concesiones%20viales.pdf
+
+El mapa y la clasificación de los datos fue realizado totalmente por mi persona.
