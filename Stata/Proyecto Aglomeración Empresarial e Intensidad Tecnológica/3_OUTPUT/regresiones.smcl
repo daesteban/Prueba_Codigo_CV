@@ -1,0 +1,897 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}D:\STATA LIMPIO\3_OUTPUT\regresiones.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 9 Jan 2023, 21:46:11
+{txt}
+{com}. 
+. **REGRESIONES PRINCIPALES
+. **a nivel de CIUU 4 digitos
+. *regresiones de todas las empresas
+. reghdfe logprod logtrabaj logcapital logmaterial logCantidadEmpresas , abs(IndustriaTiempo1 IRUC) vce(robust)
+{res}{txt}(dropped 2918 {browse "http://scorreia.com/research/singletons.pdf":singleton observations})
+{res}{txt}({browse "http://scorreia.com/research/hdfe.pdf":MWFE estimator} converged in 93 iterations)
+{res}
+{txt}HDFE Linear regression{col 51}Number of obs{col 67}= {res}     6,223
+{txt}Absorbing 2 HDFE groups{col 51}F({res}   4{txt},{res}   3818{txt}){col 67}= {res}     78.86
+{txt}{col 51}Prob > F{col 67}= {res}    0.0000
+{txt}{col 51}R-squared{col 67}= {res}    0.9054
+{txt}{col 51}Adj R-squared{col 67}= {res}    0.8458
+{txt}{col 51}Within R-sq.{col 67}= {res}    0.2006
+{txt}{col 51}Root MSE{col 67}= {res}    0.8386
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 21}{c |}{col 33}    Robust
+{col 1}            logprod{col 21}{c |}      Coef.{col 33}   Std. Err.{col 45}      t{col 53}   P>|t|{col 61}     [95% Con{col 74}f. Interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}logtrabaj {c |}{col 21}{res}{space 2} .3511474{col 33}{space 2} .0419632{col 44}{space 1}    8.37{col 53}{space 3}0.000{col 61}{space 4}  .268875{col 74}{space 3} .4334199
+{txt}{space 9}logcapital {c |}{col 21}{res}{space 2} .0597168{col 33}{space 2} .0375634{col 44}{space 1}    1.59{col 53}{space 3}0.112{col 61}{space 4}-.0139295{col 74}{space 3}  .133363
+{txt}{space 8}logmaterial {c |}{col 21}{res}{space 2} .2606641{col 33}{space 2} .0236338{col 44}{space 1}   11.03{col 53}{space 3}0.000{col 61}{space 4} .2143279{col 74}{space 3} .3070003
+{txt}logCantidadEmpresas {c |}{col 21}{res}{space 2} .0148554{col 33}{space 2} .0193729{col 44}{space 1}    0.77{col 53}{space 3}0.443{col 61}{space 4}-.0231268{col 74}{space 3} .0528376
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2} 9.686057{col 33}{space 2}  .600485{col 44}{space 1}   16.13{col 53}{space 3}0.000{col 61}{space 4} 8.508755{col 74}{space 3} 10.86336
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Absorbed degrees of freedom:
+{res}{col 1}{text}{hline 18}{c TT}{hline 12}{hline 12}{hline 14}{hline 1}{c TRC}
+{col 1}{text}      Absorbed FE{col 19}{c |} Categories{col 32} - Redundant{col 44}  = Num. Coefs{col 59}{c |}
+{res}{col 1}{text}{hline 18}{c +}{hline 12}{hline 12}{hline 14}{hline 1}{c RT}
+{col 1}{text} IndustriaTiempo1{col 19}{c |}{space 1}      444{col 32}{space 1}        0{col 44}{result}{space 1}      444{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}             IRUC{col 19}{c |}{space 1}     1963{col 32}{space 1}        6{col 44}{result}{space 1}     1957{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}{hline 18}{c BT}{hline 12}{hline 12}{hline 14}{hline 1}{c BRC}
+{res}{txt}
+{com}. reghdfe logprod logtrabaj logcapital logmaterial logCantidadEmpresas , abs(IndustriaTiempo1 ubigeo) vce(robust)
+{res}{txt}(dropped 152 {browse "http://scorreia.com/research/singletons.pdf":singleton observations})
+{res}{txt}({browse "http://scorreia.com/research/hdfe.pdf":MWFE estimator} converged in 12 iterations)
+{res}
+{txt}HDFE Linear regression{col 51}Number of obs{col 67}= {res}     8,989
+{txt}Absorbing 2 HDFE groups{col 51}F({res}   4{txt},{res}   8205{txt}){col 67}= {res}   4013.71
+{txt}{col 51}Prob > F{col 67}= {res}    0.0000
+{txt}{col 51}R-squared{col 67}= {res}    0.7649
+{txt}{col 51}Adj R-squared{col 67}= {res}    0.7425
+{txt}{col 51}Within R-sq.{col 67}= {res}    0.6783
+{txt}{col 51}Root MSE{col 67}= {res}    1.1711
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 21}{c |}{col 33}    Robust
+{col 1}            logprod{col 21}{c |}      Coef.{col 33}   Std. Err.{col 45}      t{col 53}   P>|t|{col 61}     [95% Con{col 74}f. Interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}logtrabaj {c |}{col 21}{res}{space 2} .4775618{col 33}{space 2} .0172544{col 44}{space 1}   27.68{col 53}{space 3}0.000{col 61}{space 4} .4437389{col 74}{space 3} .5113847
+{txt}{space 9}logcapital {c |}{col 21}{res}{space 2} .1444748{col 33}{space 2} .0112513{col 44}{space 1}   12.84{col 53}{space 3}0.000{col 61}{space 4} .1224194{col 74}{space 3} .1665302
+{txt}{space 8}logmaterial {c |}{col 21}{res}{space 2} .4175531{col 33}{space 2} .0169855{col 44}{space 1}   24.58{col 53}{space 3}0.000{col 61}{space 4} .3842572{col 74}{space 3}  .450849
+{txt}logCantidadEmpresas {c |}{col 21}{res}{space 2}-.0523329{col 33}{space 2} .0147765{col 44}{space 1}   -3.54{col 53}{space 3}0.000{col 61}{space 4}-.0812985{col 74}{space 3}-.0233673
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2}  5.67157{col 33}{space 2} .1878221{col 44}{space 1}   30.20{col 53}{space 3}0.000{col 61}{space 4} 5.303391{col 74}{space 3} 6.039749
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Absorbed degrees of freedom:
+{res}{col 1}{text}{hline 18}{c TT}{hline 12}{hline 12}{hline 14}{hline 1}{c TRC}
+{col 1}{text}      Absorbed FE{col 19}{c |} Categories{col 32} - Redundant{col 44}  = Num. Coefs{col 59}{c |}
+{res}{col 1}{text}{hline 18}{c +}{hline 12}{hline 12}{hline 14}{hline 1}{c RT}
+{col 1}{text} IndustriaTiempo1{col 19}{c |}{space 1}      479{col 32}{space 1}        0{col 44}{result}{space 1}      479{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}           ubigeo{col 19}{c |}{space 1}      302{col 32}{space 1}        1{col 44}{result}{space 1}      301{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}{hline 18}{c BT}{hline 12}{hline 12}{hline 14}{hline 1}{c BRC}
+{res}{txt}
+{com}. 
+. *regresiones de todas las empresas de alta intensidad tecnologica
+. reghdfe logprod logtrabaj logcapital logmaterial logCantidadEmpresas if AltaTec==1 , abs(IndustriaTiempo1 IRUC)  vce(robust)
+{res}{txt}(dropped 119 {browse "http://scorreia.com/research/singletons.pdf":singleton observations})
+{res}{txt}({browse "http://scorreia.com/research/hdfe.pdf":MWFE estimator} converged in 14 iterations)
+{res}
+{txt}HDFE Linear regression{col 51}Number of obs{col 67}= {res}       416
+{txt}Absorbing 2 HDFE groups{col 51}F({res}   4{txt},{res}    245{txt}){col 67}= {res}      3.48
+{txt}{col 51}Prob > F{col 67}= {res}    0.0087
+{txt}{col 51}R-squared{col 67}= {res}    0.9242
+{txt}{col 51}Adj R-squared{col 67}= {res}    0.8715
+{txt}{col 51}Within R-sq.{col 67}= {res}    0.1071
+{txt}{col 51}Root MSE{col 67}= {res}    0.7544
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 21}{c |}{col 33}    Robust
+{col 1}            logprod{col 21}{c |}      Coef.{col 33}   Std. Err.{col 45}      t{col 53}   P>|t|{col 61}     [95% Con{col 74}f. Interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}logtrabaj {c |}{col 21}{res}{space 2} .0199305{col 33}{space 2} .0926006{col 44}{space 1}    0.22{col 53}{space 3}0.830{col 61}{space 4}-.1624643{col 74}{space 3} .2023252
+{txt}{space 9}logcapital {c |}{col 21}{res}{space 2}-.2640396{col 33}{space 2} .1563771{col 44}{space 1}   -1.69{col 53}{space 3}0.093{col 61}{space 4}-.5720547{col 74}{space 3} .0439754
+{txt}{space 8}logmaterial {c |}{col 21}{res}{space 2} .2086494{col 33}{space 2} .0735761{col 44}{space 1}    2.84{col 53}{space 3}0.005{col 61}{space 4}  .063727{col 74}{space 3} .3535718
+{txt}logCantidadEmpresas {c |}{col 21}{res}{space 2} .1121971{col 33}{space 2} .0963627{col 44}{space 1}    1.16{col 53}{space 3}0.245{col 61}{space 4}-.0776079{col 74}{space 3} .3020021
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2} 16.72173{col 33}{space 2} 2.690512{col 44}{space 1}    6.22{col 53}{space 3}0.000{col 61}{space 4} 11.42224{col 74}{space 3} 22.02122
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Absorbed degrees of freedom:
+{res}{col 1}{text}{hline 18}{c TT}{hline 12}{hline 12}{hline 14}{hline 1}{c TRC}
+{col 1}{text}      Absorbed FE{col 19}{c |} Categories{col 32} - Redundant{col 44}  = Num. Coefs{col 59}{c |}
+{res}{col 1}{text}{hline 18}{c +}{hline 12}{hline 12}{hline 14}{hline 1}{c RT}
+{col 1}{text} IndustriaTiempo1{col 19}{c |}{space 1}       40{col 32}{space 1}        0{col 44}{result}{space 1}       40{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}             IRUC{col 19}{c |}{space 1}      134{col 32}{space 1}        7{col 44}{result}{space 1}      127{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}{hline 18}{c BT}{hline 12}{hline 12}{hline 14}{hline 1}{c BRC}
+{res}{txt}
+{com}. reghdfe logprod logtrabaj logcapital logmaterial logCantidadEmpresas if AltaTec==1 , abs(IndustriaTiempo1 ubigeo) vce(robust)
+{res}{txt}(dropped 58 {browse "http://scorreia.com/research/singletons.pdf":singleton observations})
+{res}{txt}({browse "http://scorreia.com/research/hdfe.pdf":MWFE estimator} converged in 14 iterations)
+{res}
+{txt}HDFE Linear regression{col 51}Number of obs{col 67}= {res}       477
+{txt}Absorbing 2 HDFE groups{col 51}F({res}   4{txt},{res}    371{txt}){col 67}= {res}    259.68
+{txt}{col 51}Prob > F{col 67}= {res}    0.0000
+{txt}{col 51}R-squared{col 67}= {res}    0.8078
+{txt}{col 51}Adj R-squared{col 67}= {res}    0.7534
+{txt}{col 51}Within R-sq.{col 67}= {res}    0.6894
+{txt}{col 51}Root MSE{col 67}= {res}    1.0777
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 21}{c |}{col 33}    Robust
+{col 1}            logprod{col 21}{c |}      Coef.{col 33}   Std. Err.{col 45}      t{col 53}   P>|t|{col 61}     [95% Con{col 74}f. Interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}logtrabaj {c |}{col 21}{res}{space 2} .5244445{col 33}{space 2} .0744056{col 44}{space 1}    7.05{col 53}{space 3}0.000{col 61}{space 4} .3781349{col 74}{space 3} .6707541
+{txt}{space 9}logcapital {c |}{col 21}{res}{space 2}  .083288{col 33}{space 2} .0478014{col 44}{space 1}    1.74{col 53}{space 3}0.082{col 61}{space 4}-.0107076{col 74}{space 3} .1772836
+{txt}{space 8}logmaterial {c |}{col 21}{res}{space 2} .4130486{col 33}{space 2} .0457225{col 44}{space 1}    9.03{col 53}{space 3}0.000{col 61}{space 4} .3231408{col 74}{space 3} .5029565
+{txt}logCantidadEmpresas {c |}{col 21}{res}{space 2}-.0362688{col 33}{space 2}  .080251{col 44}{space 1}   -0.45{col 53}{space 3}0.652{col 61}{space 4}-.1940727{col 74}{space 3} .1215352
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2}  6.58719{col 33}{space 2} .6753107{col 44}{space 1}    9.75{col 53}{space 3}0.000{col 61}{space 4} 5.259273{col 74}{space 3} 7.915106
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Absorbed degrees of freedom:
+{res}{col 1}{text}{hline 18}{c TT}{hline 12}{hline 12}{hline 14}{hline 1}{c TRC}
+{col 1}{text}      Absorbed FE{col 19}{c |} Categories{col 32} - Redundant{col 44}  = Num. Coefs{col 59}{c |}
+{res}{col 1}{text}{hline 18}{c +}{hline 12}{hline 12}{hline 14}{hline 1}{c RT}
+{col 1}{text} IndustriaTiempo1{col 19}{c |}{space 1}       41{col 32}{space 1}        0{col 44}{result}{space 1}       41{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}           ubigeo{col 19}{c |}{space 1}       62{col 32}{space 1}        1{col 44}{result}{space 1}       61{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}{hline 18}{c BT}{hline 12}{hline 12}{hline 14}{hline 1}{c BRC}
+{res}{txt}
+{com}. 
+. *regresiones de todas las empresas de media alta intensidad tecnologica
+. reghdfe logprod logtrabaj logcapital logmaterial logCantidadEmpresas if MediaAltaTec==1 , abs(IndustriaTiempo1 IRUC) vce(robust)
+{res}{txt}(dropped 629 {browse "http://scorreia.com/research/singletons.pdf":singleton observations})
+{res}{txt}({browse "http://scorreia.com/research/hdfe.pdf":MWFE estimator} converged in 70 iterations)
+{res}
+{txt}HDFE Linear regression{col 51}Number of obs{col 67}= {res}     1,076
+{txt}Absorbing 2 HDFE groups{col 51}F({res}   4{txt},{res}    601{txt}){col 67}= {res}     10.40
+{txt}{col 51}Prob > F{col 67}= {res}    0.0000
+{txt}{col 51}R-squared{col 67}= {res}    0.9021
+{txt}{col 51}Adj R-squared{col 67}= {res}    0.8249
+{txt}{col 51}Within R-sq.{col 67}= {res}    0.1407
+{txt}{col 51}Root MSE{col 67}= {res}    0.8828
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 21}{c |}{col 33}    Robust
+{col 1}            logprod{col 21}{c |}      Coef.{col 33}   Std. Err.{col 45}      t{col 53}   P>|t|{col 61}     [95% Con{col 74}f. Interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}logtrabaj {c |}{col 21}{res}{space 2} .4170335{col 33}{space 2} .1371605{col 44}{space 1}    3.04{col 53}{space 3}0.002{col 61}{space 4} .1476613{col 74}{space 3} .6864057
+{txt}{space 9}logcapital {c |}{col 21}{res}{space 2} .0674679{col 33}{space 2} .0785886{col 44}{space 1}    0.86{col 53}{space 3}0.391{col 61}{space 4}-.0868737{col 74}{space 3} .2218095
+{txt}{space 8}logmaterial {c |}{col 21}{res}{space 2} .2112461{col 33}{space 2} .0523435{col 44}{space 1}    4.04{col 53}{space 3}0.000{col 61}{space 4} .1084477{col 74}{space 3} .3140445
+{txt}logCantidadEmpresas {c |}{col 21}{res}{space 2} .0251287{col 33}{space 2}  .060278{col 44}{space 1}    0.42{col 53}{space 3}0.677{col 61}{space 4}-.0932523{col 74}{space 3} .1435097
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2} 10.05944{col 33}{space 2} 1.266189{col 44}{space 1}    7.94{col 53}{space 3}0.000{col 61}{space 4} 7.572743{col 74}{space 3} 12.54613
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Absorbed degrees of freedom:
+{res}{col 1}{text}{hline 18}{c TT}{hline 12}{hline 12}{hline 14}{hline 1}{c TRC}
+{col 1}{text}      Absorbed FE{col 19}{c |} Categories{col 32} - Redundant{col 44}  = Num. Coefs{col 59}{c |}
+{res}{col 1}{text}{hline 18}{c +}{hline 12}{hline 12}{hline 14}{hline 1}{c RT}
+{col 1}{text} IndustriaTiempo1{col 19}{c |}{space 1}      127{col 32}{space 1}        0{col 44}{result}{space 1}      127{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}             IRUC{col 19}{c |}{space 1}      349{col 32}{space 1}        5{col 44}{result}{space 1}      344{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}{hline 18}{c BT}{hline 12}{hline 12}{hline 14}{hline 1}{c BRC}
+{res}{txt}
+{com}. reghdfe logprod logtrabaj logcapital logmaterial logCantidadEmpresas if MediaAltaTec==1 , abs(IndustriaTiempo1 ubigeo) vce(robust)
+{res}{txt}(dropped 128 {browse "http://scorreia.com/research/singletons.pdf":singleton observations})
+{res}{txt}({browse "http://scorreia.com/research/hdfe.pdf":MWFE estimator} converged in 14 iterations)
+{res}
+{txt}HDFE Linear regression{col 51}Number of obs{col 67}= {res}     1,577
+{txt}Absorbing 2 HDFE groups{col 51}F({res}   4{txt},{res}   1278{txt}){col 67}= {res}    509.90
+{txt}{col 51}Prob > F{col 67}= {res}    0.0000
+{txt}{col 51}R-squared{col 67}= {res}    0.7741
+{txt}{col 51}Adj R-squared{col 67}= {res}    0.7214
+{txt}{col 51}Within R-sq.{col 67}= {res}    0.6538
+{txt}{col 51}Root MSE{col 67}= {res}    1.2277
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 21}{c |}{col 33}    Robust
+{col 1}            logprod{col 21}{c |}      Coef.{col 33}   Std. Err.{col 45}      t{col 53}   P>|t|{col 61}     [95% Con{col 74}f. Interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}logtrabaj {c |}{col 21}{res}{space 2} .4622281{col 33}{space 2} .0424034{col 44}{space 1}   10.90{col 53}{space 3}0.000{col 61}{space 4} .3790402{col 74}{space 3}  .545416
+{txt}{space 9}logcapital {c |}{col 21}{res}{space 2} .1531674{col 33}{space 2} .0298444{col 44}{space 1}    5.13{col 53}{space 3}0.000{col 61}{space 4} .0946181{col 74}{space 3} .2117167
+{txt}{space 8}logmaterial {c |}{col 21}{res}{space 2} .4258889{col 33}{space 2} .0389655{col 44}{space 1}   10.93{col 53}{space 3}0.000{col 61}{space 4} .3494455{col 74}{space 3} .5023322
+{txt}logCantidadEmpresas {c |}{col 21}{res}{space 2}-.1023931{col 33}{space 2} .0504622{col 44}{space 1}   -2.03{col 53}{space 3}0.043{col 61}{space 4}-.2013911{col 74}{space 3}-.0033952
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2} 5.610227{col 33}{space 2} .4827397{col 44}{space 1}   11.62{col 53}{space 3}0.000{col 61}{space 4} 4.663178{col 74}{space 3} 6.557277
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Absorbed degrees of freedom:
+{res}{col 1}{text}{hline 18}{c TT}{hline 12}{hline 12}{hline 14}{hline 1}{c TRC}
+{col 1}{text}      Absorbed FE{col 19}{c |} Categories{col 32} - Redundant{col 44}  = Num. Coefs{col 59}{c |}
+{res}{col 1}{text}{hline 18}{c +}{hline 12}{hline 12}{hline 14}{hline 1}{c RT}
+{col 1}{text} IndustriaTiempo1{col 19}{c |}{space 1}      149{col 32}{space 1}        0{col 44}{result}{space 1}      149{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}           ubigeo{col 19}{c |}{space 1}      147{col 32}{space 1}        1{col 44}{result}{space 1}      146{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}{hline 18}{c BT}{hline 12}{hline 12}{hline 14}{hline 1}{c BRC}
+{res}{txt}
+{com}. 
+. *regresiones de todas las empresas de media baja intensidad tecnologica
+. reghdfe logprod logtrabaj logcapital logmaterial logCantidadEmpresas if MediaBajaTec==1 , abs(IndustriaTiempo1 IRUC) vce(robust)
+{res}{txt}(dropped 873 {browse "http://scorreia.com/research/singletons.pdf":singleton observations})
+{res}{txt}({browse "http://scorreia.com/research/hdfe.pdf":MWFE estimator} converged in 58 iterations)
+{res}
+{txt}HDFE Linear regression{col 51}Number of obs{col 67}= {res}     1,922
+{txt}Absorbing 2 HDFE groups{col 51}F({res}   4{txt},{res}   1225{txt}){col 67}= {res}     37.99
+{txt}{col 51}Prob > F{col 67}= {res}    0.0000
+{txt}{col 51}R-squared{col 67}= {res}    0.8986
+{txt}{col 51}Adj R-squared{col 67}= {res}    0.8410
+{txt}{col 51}Within R-sq.{col 67}= {res}    0.2260
+{txt}{col 51}Root MSE{col 67}= {res}    0.8383
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 21}{c |}{col 33}    Robust
+{col 1}            logprod{col 21}{c |}      Coef.{col 33}   Std. Err.{col 45}      t{col 53}   P>|t|{col 61}     [95% Con{col 74}f. Interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}logtrabaj {c |}{col 21}{res}{space 2} .4241636{col 33}{space 2} .0722942{col 44}{space 1}    5.87{col 53}{space 3}0.000{col 61}{space 4} .2823294{col 74}{space 3} .5659979
+{txt}{space 9}logcapital {c |}{col 21}{res}{space 2} .0442113{col 33}{space 2} .0726019{col 44}{space 1}    0.61{col 53}{space 3}0.543{col 61}{space 4}-.0982265{col 74}{space 3} .1866491
+{txt}{space 8}logmaterial {c |}{col 21}{res}{space 2} .2643317{col 33}{space 2}  .046862{col 44}{space 1}    5.64{col 53}{space 3}0.000{col 61}{space 4} .1723931{col 74}{space 3} .3562704
+{txt}logCantidadEmpresas {c |}{col 21}{res}{space 2}-.0007262{col 33}{space 2} .0326592{col 44}{space 1}   -0.02{col 53}{space 3}0.982{col 61}{space 4}-.0648004{col 74}{space 3}  .063348
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2} 9.703591{col 33}{space 2} 1.099468{col 44}{space 1}    8.83{col 53}{space 3}0.000{col 61}{space 4} 7.546542{col 74}{space 3} 11.86064
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Absorbed degrees of freedom:
+{res}{col 1}{text}{hline 18}{c TT}{hline 12}{hline 12}{hline 14}{hline 1}{c TRC}
+{col 1}{text}      Absorbed FE{col 19}{c |} Categories{col 32} - Redundant{col 44}  = Num. Coefs{col 59}{c |}
+{res}{col 1}{text}{hline 18}{c +}{hline 12}{hline 12}{hline 14}{hline 1}{c RT}
+{col 1}{text} IndustriaTiempo1{col 19}{c |}{space 1}      114{col 32}{space 1}        0{col 44}{result}{space 1}      114{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}             IRUC{col 19}{c |}{space 1}      582{col 32}{space 1}        3{col 44}{result}{space 1}      579{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}{hline 18}{c BT}{hline 12}{hline 12}{hline 14}{hline 1}{c BRC}
+{res}{txt}
+{com}. reghdfe logprod logtrabaj logcapital logmaterial logCantidadEmpresas if MediaBajaTec==1 , abs(IndustriaTiempo1 ubigeo) vce(robust)
+{res}{txt}(dropped 116 {browse "http://scorreia.com/research/singletons.pdf":singleton observations})
+{res}{txt}({browse "http://scorreia.com/research/hdfe.pdf":MWFE estimator} converged in 13 iterations)
+{res}
+{txt}HDFE Linear regression{col 51}Number of obs{col 67}= {res}     2,679
+{txt}Absorbing 2 HDFE groups{col 51}F({res}   4{txt},{res}   2367{txt}){col 67}= {res}   1263.47
+{txt}{col 51}Prob > F{col 67}= {res}    0.0000
+{txt}{col 51}R-squared{col 67}= {res}    0.7764
+{txt}{col 51}Adj R-squared{col 67}= {res}    0.7470
+{txt}{col 51}Within R-sq.{col 67}= {res}    0.7055
+{txt}{col 51}Root MSE{col 67}= {res}    1.1662
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 21}{c |}{col 33}    Robust
+{col 1}            logprod{col 21}{c |}      Coef.{col 33}   Std. Err.{col 45}      t{col 53}   P>|t|{col 61}     [95% Con{col 74}f. Interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}logtrabaj {c |}{col 21}{res}{space 2} .4989241{col 33}{space 2} .0349283{col 44}{space 1}   14.28{col 53}{space 3}0.000{col 61}{space 4}  .430431{col 74}{space 3} .5674173
+{txt}{space 9}logcapital {c |}{col 21}{res}{space 2} .1695477{col 33}{space 2} .0239041{col 44}{space 1}    7.09{col 53}{space 3}0.000{col 61}{space 4} .1226726{col 74}{space 3} .2164228
+{txt}{space 8}logmaterial {c |}{col 21}{res}{space 2} .4033374{col 33}{space 2} .0327714{col 44}{space 1}   12.31{col 53}{space 3}0.000{col 61}{space 4} .3390738{col 74}{space 3}  .467601
+{txt}logCantidadEmpresas {c |}{col 21}{res}{space 2}-.1048486{col 33}{space 2} .0297264{col 44}{space 1}   -3.53{col 53}{space 3}0.000{col 61}{space 4}-.1631411{col 74}{space 3}-.0465561
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2} 5.550121{col 33}{space 2} .3647684{col 44}{space 1}   15.22{col 53}{space 3}0.000{col 61}{space 4} 4.834822{col 74}{space 3}  6.26542
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Absorbed degrees of freedom:
+{res}{col 1}{text}{hline 18}{c TT}{hline 12}{hline 12}{hline 14}{hline 1}{c TRC}
+{col 1}{text}      Absorbed FE{col 19}{c |} Categories{col 32} - Redundant{col 44}  = Num. Coefs{col 59}{c |}
+{res}{col 1}{text}{hline 18}{c +}{hline 12}{hline 12}{hline 14}{hline 1}{c RT}
+{col 1}{text} IndustriaTiempo1{col 19}{c |}{space 1}      125{col 32}{space 1}        0{col 44}{result}{space 1}      125{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}           ubigeo{col 19}{c |}{space 1}      184{col 32}{space 1}        1{col 44}{result}{space 1}      183{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}{hline 18}{c BT}{hline 12}{hline 12}{hline 14}{hline 1}{c BRC}
+{res}{txt}
+{com}. 
+. *regresiones de todas las empresas de  baja intensidad tecnologica
+. reghdfe logprod logtrabaj logcapital logmaterial logCantidadEmpresas if BajaTec==1 , abs(IndustriaTiempo1 IRUC) vce(robust)
+{res}{txt}(dropped 1506 {browse "http://scorreia.com/research/singletons.pdf":singleton observations})
+{res}{txt}({browse "http://scorreia.com/research/hdfe.pdf":MWFE estimator} converged in 72 iterations)
+{res}
+{txt}HDFE Linear regression{col 51}Number of obs{col 67}= {res}     2,552
+{txt}Absorbing 2 HDFE groups{col 51}F({res}   4{txt},{res}   1571{txt}){col 67}= {res}     32.22
+{txt}{col 51}Prob > F{col 67}= {res}    0.0000
+{txt}{col 51}R-squared{col 67}= {res}    0.9111
+{txt}{col 51}Adj R-squared{col 67}= {res}    0.8556
+{txt}{col 51}Within R-sq.{col 67}= {res}    0.2307
+{txt}{col 51}Root MSE{col 67}= {res}    0.8098
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 21}{c |}{col 33}    Robust
+{col 1}            logprod{col 21}{c |}      Coef.{col 33}   Std. Err.{col 45}      t{col 53}   P>|t|{col 61}     [95% Con{col 74}f. Interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}logtrabaj {c |}{col 21}{res}{space 2} .3669283{col 33}{space 2} .0656729{col 44}{space 1}    5.59{col 53}{space 3}0.000{col 61}{space 4} .2381125{col 74}{space 3} .4957441
+{txt}{space 9}logcapital {c |}{col 21}{res}{space 2} .0437358{col 33}{space 2} .0548629{col 44}{space 1}    0.80{col 53}{space 3}0.425{col 61}{space 4}-.0638764{col 74}{space 3}  .151348
+{txt}{space 8}logmaterial {c |}{col 21}{res}{space 2}  .287512{col 33}{space 2} .0376189{col 44}{space 1}    7.64{col 53}{space 3}0.000{col 61}{space 4} .2137235{col 74}{space 3} .3613004
+{txt}logCantidadEmpresas {c |}{col 21}{res}{space 2}-.0005519{col 33}{space 2}  .028344{col 44}{space 1}   -0.02{col 53}{space 3}0.984{col 61}{space 4}-.0561479{col 74}{space 3}  .055044
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2}  9.47433{col 33}{space 2} .9277208{col 44}{space 1}   10.21{col 53}{space 3}0.000{col 61}{space 4} 7.654629{col 74}{space 3} 11.29403
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Absorbed degrees of freedom:
+{res}{col 1}{text}{hline 18}{c TT}{hline 12}{hline 12}{hline 14}{hline 1}{c TRC}
+{col 1}{text}      Absorbed FE{col 19}{c |} Categories{col 32} - Redundant{col 44}  = Num. Coefs{col 59}{c |}
+{res}{col 1}{text}{hline 18}{c +}{hline 12}{hline 12}{hline 14}{hline 1}{c RT}
+{col 1}{text} IndustriaTiempo1{col 19}{c |}{space 1}      148{col 32}{space 1}        0{col 44}{result}{space 1}      148{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}             IRUC{col 19}{c |}{space 1}      831{col 32}{space 1}        2{col 44}{result}{space 1}      829{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}{hline 18}{c BT}{hline 12}{hline 12}{hline 14}{hline 1}{c BRC}
+{res}{txt}
+{com}. reghdfe logprod logtrabaj logcapital logmaterial logCantidadEmpresas if BajaTec==1 , abs(IndustriaTiempo1 ubigeo) vce(robust)
+{res}{txt}(dropped 91 {browse "http://scorreia.com/research/singletons.pdf":singleton observations})
+{res}{txt}({browse "http://scorreia.com/research/hdfe.pdf":MWFE estimator} converged in 13 iterations)
+{res}
+{txt}HDFE Linear regression{col 51}Number of obs{col 67}= {res}     3,967
+{txt}Absorbing 2 HDFE groups{col 51}F({res}   4{txt},{res}   3563{txt}){col 67}= {res}   1754.38
+{txt}{col 51}Prob > F{col 67}= {res}    0.0000
+{txt}{col 51}R-squared{col 67}= {res}    0.7732
+{txt}{col 51}Adj R-squared{col 67}= {res}    0.7475
+{txt}{col 51}Within R-sq.{col 67}= {res}    0.6746
+{txt}{col 51}Root MSE{col 67}= {res}    1.1485
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 21}{c |}{col 33}    Robust
+{col 1}            logprod{col 21}{c |}      Coef.{col 33}   Std. Err.{col 45}      t{col 53}   P>|t|{col 61}     [95% Con{col 74}f. Interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}logtrabaj {c |}{col 21}{res}{space 2} .4597629{col 33}{space 2} .0249472{col 44}{space 1}   18.43{col 53}{space 3}0.000{col 61}{space 4} .4108506{col 74}{space 3} .5086751
+{txt}{space 9}logcapital {c |}{col 21}{res}{space 2} .1288374{col 33}{space 2} .0156142{col 44}{space 1}    8.25{col 53}{space 3}0.000{col 61}{space 4} .0982237{col 74}{space 3} .1594511
+{txt}{space 8}logmaterial {c |}{col 21}{res}{space 2} .4313421{col 33}{space 2} .0269658{col 44}{space 1}   16.00{col 53}{space 3}0.000{col 61}{space 4} .3784722{col 74}{space 3}  .484212
+{txt}logCantidadEmpresas {c |}{col 21}{res}{space 2}-.0405314{col 33}{space 2} .0215484{col 44}{space 1}   -1.88{col 53}{space 3}0.060{col 61}{space 4}-.0827799{col 74}{space 3} .0017171
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2} 5.724606{col 33}{space 2} .2851978{col 44}{space 1}   20.07{col 53}{space 3}0.000{col 61}{space 4} 5.165439{col 74}{space 3} 6.283774
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Absorbed degrees of freedom:
+{res}{col 1}{text}{hline 18}{c TT}{hline 12}{hline 12}{hline 14}{hline 1}{c TRC}
+{col 1}{text}      Absorbed FE{col 19}{c |} Categories{col 32} - Redundant{col 44}  = Num. Coefs{col 59}{c |}
+{res}{col 1}{text}{hline 18}{c +}{hline 12}{hline 12}{hline 14}{hline 1}{c RT}
+{col 1}{text} IndustriaTiempo1{col 19}{c |}{space 1}      157{col 32}{space 1}        0{col 44}{result}{space 1}      157{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}           ubigeo{col 19}{c |}{space 1}      244{col 32}{space 1}        1{col 44}{result}{space 1}      243{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}{hline 18}{c BT}{hline 12}{hline 12}{hline 14}{hline 1}{c BRC}
+{res}{txt}
+{com}. 
+. 
+. *regresiones de todas las empresas de alta, media alta y media baja intensidad tecnologica
+. reghdfe logprod logtrabaj logcapital logmaterial logCantidadEmpresas if BajaTec==0 , abs(IndustriaTiempo1 IRUC) vce(robust)
+{res}{txt}(dropped 1450 {browse "http://scorreia.com/research/singletons.pdf":singleton observations})
+{res}{txt}({browse "http://scorreia.com/research/hdfe.pdf":MWFE estimator} converged in 76 iterations)
+{res}
+{txt}HDFE Linear regression{col 51}Number of obs{col 67}= {res}     3,585
+{txt}Absorbing 2 HDFE groups{col 51}F({res}   4{txt},{res}   2188{txt}){col 67}= {res}     46.48
+{txt}{col 51}Prob > F{col 67}= {res}    0.0000
+{txt}{col 51}R-squared{col 67}= {res}    0.9027
+{txt}{col 51}Adj R-squared{col 67}= {res}    0.8406
+{txt}{col 51}Within R-sq.{col 67}= {res}    0.1858
+{txt}{col 51}Root MSE{col 67}= {res}    0.8512
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 21}{c |}{col 33}    Robust
+{col 1}            logprod{col 21}{c |}      Coef.{col 33}   Std. Err.{col 45}      t{col 53}   P>|t|{col 61}     [95% Con{col 74}f. Interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}logtrabaj {c |}{col 21}{res}{space 2} .3316831{col 33}{space 2} .0543228{col 44}{space 1}    6.11{col 53}{space 3}0.000{col 61}{space 4} .2251535{col 74}{space 3} .4382127
+{txt}{space 9}logcapital {c |}{col 21}{res}{space 2} .0691909{col 33}{space 2} .0506544{col 44}{space 1}    1.37{col 53}{space 3}0.172{col 61}{space 4}-.0301448{col 74}{space 3} .1685266
+{txt}{space 8}logmaterial {c |}{col 21}{res}{space 2} .2543435{col 33}{space 2} .0318602{col 44}{space 1}    7.98{col 53}{space 3}0.000{col 61}{space 4}  .191864{col 74}{space 3} .3168229
+{txt}logCantidadEmpresas {c |}{col 21}{res}{space 2} .0264625{col 33}{space 2} .0268682{col 44}{space 1}    0.98{col 53}{space 3}0.325{col 61}{space 4}-.0262274{col 74}{space 3} .0791524
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2} 9.724239{col 33}{space 2} .7951376{col 44}{space 1}   12.23{col 53}{space 3}0.000{col 61}{space 4} 8.164935{col 74}{space 3} 11.28354
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Absorbed degrees of freedom:
+{res}{col 1}{text}{hline 18}{c TT}{hline 12}{hline 12}{hline 14}{hline 1}{c TRC}
+{col 1}{text}      Absorbed FE{col 19}{c |} Categories{col 32} - Redundant{col 44}  = Num. Coefs{col 59}{c |}
+{res}{col 1}{text}{hline 18}{c +}{hline 12}{hline 12}{hline 14}{hline 1}{c RT}
+{col 1}{text} IndustriaTiempo1{col 19}{c |}{space 1}      292{col 32}{space 1}        0{col 44}{result}{space 1}      292{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}             IRUC{col 19}{c |}{space 1}     1107{col 32}{space 1}        6{col 44}{result}{space 1}     1101{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}{hline 18}{c BT}{hline 12}{hline 12}{hline 14}{hline 1}{c BRC}
+{res}{txt}
+{com}. reghdfe logprod logtrabaj logcapital logmaterial logCantidadEmpresas if BajaTec==0 , abs(IndustriaTiempo1 ubigeo) vce(robust)
+{res}{txt}(dropped 155 {browse "http://scorreia.com/research/singletons.pdf":singleton observations})
+{res}{txt}({browse "http://scorreia.com/research/hdfe.pdf":MWFE estimator} converged in 13 iterations)
+{res}
+{txt}HDFE Linear regression{col 51}Number of obs{col 67}= {res}     4,880
+{txt}Absorbing 2 HDFE groups{col 51}F({res}   4{txt},{res}   4327{txt}){col 67}= {res}   2116.18
+{txt}{col 51}Prob > F{col 67}= {res}    0.0000
+{txt}{col 51}R-squared{col 67}= {res}    0.7696
+{txt}{col 51}Adj R-squared{col 67}= {res}    0.7402
+{txt}{col 51}Within R-sq.{col 67}= {res}    0.6849
+{txt}{col 51}Root MSE{col 67}= {res}    1.1823
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 21}{c |}{col 33}    Robust
+{col 1}            logprod{col 21}{c |}      Coef.{col 33}   Std. Err.{col 45}      t{col 53}   P>|t|{col 61}     [95% Con{col 74}f. Interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}logtrabaj {c |}{col 21}{res}{space 2} .4971899{col 33}{space 2} .0244594{col 44}{space 1}   20.33{col 53}{space 3}0.000{col 61}{space 4} .4492369{col 74}{space 3} .5451429
+{txt}{space 9}logcapital {c |}{col 21}{res}{space 2} .1587642{col 33}{space 2} .0167664{col 44}{space 1}    9.47{col 53}{space 3}0.000{col 61}{space 4} .1258936{col 74}{space 3} .1916349
+{txt}{space 8}logmaterial {c |}{col 21}{res}{space 2} .4065352{col 33}{space 2}  .022601{col 44}{space 1}   17.99{col 53}{space 3}0.000{col 61}{space 4} .3622256{col 74}{space 3} .4508447
+{txt}logCantidadEmpresas {c |}{col 21}{res}{space 2}-.0871447{col 33}{space 2} .0222254{col 44}{space 1}   -3.92{col 53}{space 3}0.000{col 61}{space 4}-.1307179{col 74}{space 3}-.0435715
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2} 5.637044{col 33}{space 2}  .257319{col 44}{space 1}   21.91{col 53}{space 3}0.000{col 61}{space 4} 5.132567{col 74}{space 3} 6.141521
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Absorbed degrees of freedom:
+{res}{col 1}{text}{hline 18}{c TT}{hline 12}{hline 12}{hline 14}{hline 1}{c TRC}
+{col 1}{text}      Absorbed FE{col 19}{c |} Categories{col 32} - Redundant{col 44}  = Num. Coefs{col 59}{c |}
+{res}{col 1}{text}{hline 18}{c +}{hline 12}{hline 12}{hline 14}{hline 1}{c RT}
+{col 1}{text} IndustriaTiempo1{col 19}{c |}{space 1}      318{col 32}{space 1}        0{col 44}{result}{space 1}      318{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}           ubigeo{col 19}{c |}{space 1}      232{col 32}{space 1}        1{col 44}{result}{space 1}      231{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}{hline 18}{c BT}{hline 12}{hline 12}{hline 14}{hline 1}{c BRC}
+{res}{txt}
+{com}. **************************************************************
+. **OTRAS REGRESIONES
+. **a nivel de CIUU 2 digitos
+. *regresiones de todas las empresas
+. reghdfe logprod logtrabaj logcapital logmaterial logCantidadEmpresas , abs(IndustriaTiempo2 IRUC) vce(robust)
+{res}{txt}(dropped 2814 {browse "http://scorreia.com/research/singletons.pdf":singleton observations})
+{res}{txt}({browse "http://scorreia.com/research/hdfe.pdf":MWFE estimator} converged in 52 iterations)
+{res}
+{txt}HDFE Linear regression{col 51}Number of obs{col 67}= {res}     6,327
+{txt}Absorbing 2 HDFE groups{col 51}F({res}   4{txt},{res}   4217{txt}){col 67}= {res}     76.85
+{txt}{col 51}Prob > F{col 67}= {res}    0.0000
+{txt}{col 51}R-squared{col 67}= {res}    0.8921
+{txt}{col 51}Adj R-squared{col 67}= {res}    0.8381
+{txt}{col 51}Within R-sq.{col 67}= {res}    0.1896
+{txt}{col 51}Root MSE{col 67}= {res}    0.8583
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 21}{c |}{col 33}    Robust
+{col 1}            logprod{col 21}{c |}      Coef.{col 33}   Std. Err.{col 45}      t{col 53}   P>|t|{col 61}     [95% Con{col 74}f. Interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}logtrabaj {c |}{col 21}{res}{space 2} .3247019{col 33}{space 2} .0411385{col 44}{space 1}    7.89{col 53}{space 3}0.000{col 61}{space 4} .2440487{col 74}{space 3}  .405355
+{txt}{space 9}logcapital {c |}{col 21}{res}{space 2} .0439709{col 33}{space 2} .0418999{col 44}{space 1}    1.05{col 53}{space 3}0.294{col 61}{space 4}-.0381749{col 74}{space 3} .1261167
+{txt}{space 8}logmaterial {c |}{col 21}{res}{space 2} .2626869{col 33}{space 2} .0231241{col 44}{space 1}   11.36{col 53}{space 3}0.000{col 61}{space 4} .2173515{col 74}{space 3} .3080223
+{txt}logCantidadEmpresas {c |}{col 21}{res}{space 2} .0115465{col 33}{space 2} .0188019{col 44}{space 1}    0.61{col 53}{space 3}0.539{col 61}{space 4}-.0253151{col 74}{space 3} .0484082
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2} 10.01028{col 33}{space 2} .6540626{col 44}{space 1}   15.30{col 53}{space 3}0.000{col 61}{space 4} 8.727973{col 74}{space 3} 11.29259
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Absorbed degrees of freedom:
+{res}{col 1}{text}{hline 18}{c TT}{hline 12}{hline 12}{hline 14}{hline 1}{c TRC}
+{col 1}{text}      Absorbed FE{col 19}{c |} Categories{col 32} - Redundant{col 44}  = Num. Coefs{col 59}{c |}
+{res}{col 1}{text}{hline 18}{c +}{hline 12}{hline 12}{hline 14}{hline 1}{c RT}
+{col 1}{text} IndustriaTiempo2{col 19}{c |}{space 1}      114{col 32}{space 1}        0{col 44}{result}{space 1}      114{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}             IRUC{col 19}{c |}{space 1}     1993{col 32}{space 1}        1{col 44}{result}{space 1}     1992{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}{hline 18}{c BT}{hline 12}{hline 12}{hline 14}{hline 1}{c BRC}
+{res}{txt}
+{com}. reghdfe logprod logtrabaj logcapital logmaterial logCantidadEmpresas , abs(IndustriaTiempo2 ubigeo) vce(robust)
+{res}{txt}(dropped 71 {browse "http://scorreia.com/research/singletons.pdf":singleton observations})
+{res}{txt}({browse "http://scorreia.com/research/hdfe.pdf":MWFE estimator} converged in 11 iterations)
+{res}
+{txt}HDFE Linear regression{col 51}Number of obs{col 67}= {res}     9,070
+{txt}Absorbing 2 HDFE groups{col 51}F({res}   4{txt},{res}   8649{txt}){col 67}= {res}   4446.78
+{txt}{col 51}Prob > F{col 67}= {res}    0.0000
+{txt}{col 51}R-squared{col 67}= {res}    0.7479
+{txt}{col 51}Adj R-squared{col 67}= {res}    0.7357
+{txt}{col 51}Within R-sq.{col 67}= {res}    0.6837
+{txt}{col 51}Root MSE{col 67}= {res}    1.1861
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 21}{c |}{col 33}    Robust
+{col 1}            logprod{col 21}{c |}      Coef.{col 33}   Std. Err.{col 45}      t{col 53}   P>|t|{col 61}     [95% Con{col 74}f. Interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}logtrabaj {c |}{col 21}{res}{space 2} .4651682{col 33}{space 2} .0170144{col 44}{space 1}   27.34{col 53}{space 3}0.000{col 61}{space 4} .4318159{col 74}{space 3} .4985205
+{txt}{space 9}logcapital {c |}{col 21}{res}{space 2} .1545499{col 33}{space 2}  .011136{col 44}{space 1}   13.88{col 53}{space 3}0.000{col 61}{space 4} .1327208{col 74}{space 3} .1763791
+{txt}{space 8}logmaterial {c |}{col 21}{res}{space 2} .4216031{col 33}{space 2} .0166533{col 44}{space 1}   25.32{col 53}{space 3}0.000{col 61}{space 4} .3889586{col 74}{space 3} .4542476
+{txt}logCantidadEmpresas {c |}{col 21}{res}{space 2} -.057781{col 33}{space 2} .0146383{col 44}{space 1}   -3.95{col 53}{space 3}0.000{col 61}{space 4}-.0864755{col 74}{space 3}-.0290865
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2} 5.526078{col 33}{space 2} .1842215{col 44}{space 1}   30.00{col 53}{space 3}0.000{col 61}{space 4}  5.16496{col 74}{space 3} 5.887196
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Absorbed degrees of freedom:
+{res}{col 1}{text}{hline 18}{c TT}{hline 12}{hline 12}{hline 14}{hline 1}{c TRC}
+{col 1}{text}      Absorbed FE{col 19}{c |} Categories{col 32} - Redundant{col 44}  = Num. Coefs{col 59}{c |}
+{res}{col 1}{text}{hline 18}{c +}{hline 12}{hline 12}{hline 14}{hline 1}{c RT}
+{col 1}{text} IndustriaTiempo2{col 19}{c |}{space 1}      115{col 32}{space 1}        0{col 44}{result}{space 1}      115{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}           ubigeo{col 19}{c |}{space 1}      303{col 32}{space 1}        1{col 44}{result}{space 1}      302{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}{hline 18}{c BT}{hline 12}{hline 12}{hline 14}{hline 1}{c BRC}
+{res}{txt}
+{com}. 
+. *regresiones de todas las empresas de alta intensidad tecnologica
+. reghdfe logprod logtrabaj logcapital logmaterial logCantidadEmpresas if AltaTec==1 , abs(IndustriaTiempo2 IRUC)  vce(robust)
+{res}{txt}(dropped 107 {browse "http://scorreia.com/research/singletons.pdf":singleton observations})
+{res}{txt}({browse "http://scorreia.com/research/hdfe.pdf":MWFE estimator} converged in 11 iterations)
+{res}
+{txt}HDFE Linear regression{col 51}Number of obs{col 67}= {res}       428
+{txt}Absorbing 2 HDFE groups{col 51}F({res}   4{txt},{res}    275{txt}){col 67}= {res}      3.52
+{txt}{col 51}Prob > F{col 67}= {res}    0.0080
+{txt}{col 51}R-squared{col 67}= {res}    0.9162
+{txt}{col 51}Adj R-squared{col 67}= {res}    0.8700
+{txt}{col 51}Within R-sq.{col 67}= {res}    0.1435
+{txt}{col 51}Root MSE{col 67}= {res}    0.7525
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 21}{c |}{col 33}    Robust
+{col 1}            logprod{col 21}{c |}      Coef.{col 33}   Std. Err.{col 45}      t{col 53}   P>|t|{col 61}     [95% Con{col 74}f. Interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}logtrabaj {c |}{col 21}{res}{space 2} .0370505{col 33}{space 2} .0969582{col 44}{space 1}    0.38{col 53}{space 3}0.703{col 61}{space 4}-.1538241{col 74}{space 3} .2279251
+{txt}{space 9}logcapital {c |}{col 21}{res}{space 2}-.2699001{col 33}{space 2} .1543552{col 44}{space 1}   -1.75{col 53}{space 3}0.081{col 61}{space 4}-.5737681{col 74}{space 3} .0339678
+{txt}{space 8}logmaterial {c |}{col 21}{res}{space 2} .2434137{col 33}{space 2} .0943293{col 44}{space 1}    2.58{col 53}{space 3}0.010{col 61}{space 4} .0577143{col 74}{space 3}  .429113
+{txt}logCantidadEmpresas {c |}{col 21}{res}{space 2} .1559954{col 33}{space 2} .0869524{col 44}{space 1}    1.79{col 53}{space 3}0.074{col 61}{space 4}-.0151815{col 74}{space 3} .3271723
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2} 16.15479{col 33}{space 2}  2.68934{col 44}{space 1}    6.01{col 53}{space 3}0.000{col 61}{space 4} 10.86048{col 74}{space 3}  21.4491
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Absorbed degrees of freedom:
+{res}{col 1}{text}{hline 18}{c TT}{hline 12}{hline 12}{hline 14}{hline 1}{c TRC}
+{col 1}{text}      Absorbed FE{col 19}{c |} Categories{col 32} - Redundant{col 44}  = Num. Coefs{col 59}{c |}
+{res}{col 1}{text}{hline 18}{c +}{hline 12}{hline 12}{hline 14}{hline 1}{c RT}
+{col 1}{text} IndustriaTiempo2{col 19}{c |}{space 1}       15{col 32}{space 1}        0{col 44}{result}{space 1}       15{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}             IRUC{col 19}{c |}{space 1}      136{col 32}{space 1}        2{col 44}{result}{space 1}      134{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}{hline 18}{c BT}{hline 12}{hline 12}{hline 14}{hline 1}{c BRC}
+{res}{txt}
+{com}. reghdfe logprod logtrabaj logcapital logmaterial logCantidadEmpresas if AltaTec==1 , abs(IndustriaTiempo2 ubigeo) vce(robust)
+{res}{txt}(dropped 40 {browse "http://scorreia.com/research/singletons.pdf":singleton observations})
+{res}{txt}({browse "http://scorreia.com/research/hdfe.pdf":MWFE estimator} converged in 11 iterations)
+{res}
+{txt}HDFE Linear regression{col 51}Number of obs{col 67}= {res}       495
+{txt}Absorbing 2 HDFE groups{col 51}F({res}   4{txt},{res}    415{txt}){col 67}= {res}    292.37
+{txt}{col 51}Prob > F{col 67}= {res}    0.0000
+{txt}{col 51}R-squared{col 67}= {res}    0.8041
+{txt}{col 51}Adj R-squared{col 67}= {res}    0.7668
+{txt}{col 51}Within R-sq.{col 67}= {res}    0.7302
+{txt}{col 51}Root MSE{col 67}= {res}    1.0539
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 21}{c |}{col 33}    Robust
+{col 1}            logprod{col 21}{c |}      Coef.{col 33}   Std. Err.{col 45}      t{col 53}   P>|t|{col 61}     [95% Con{col 74}f. Interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}logtrabaj {c |}{col 21}{res}{space 2} .5277425{col 33}{space 2} .0684762{col 44}{space 1}    7.71{col 53}{space 3}0.000{col 61}{space 4}  .393139{col 74}{space 3} .6623459
+{txt}{space 9}logcapital {c |}{col 21}{res}{space 2} .0923966{col 33}{space 2}  .045852{col 44}{space 1}    2.02{col 53}{space 3}0.045{col 61}{space 4} .0022655{col 74}{space 3} .1825277
+{txt}{space 8}logmaterial {c |}{col 21}{res}{space 2} .4176226{col 33}{space 2}  .040977{col 44}{space 1}   10.19{col 53}{space 3}0.000{col 61}{space 4} .3370743{col 74}{space 3} .4981709
+{txt}logCantidadEmpresas {c |}{col 21}{res}{space 2}-.0326846{col 33}{space 2} .0727062{col 44}{space 1}   -0.45{col 53}{space 3}0.653{col 61}{space 4} -.175603{col 74}{space 3} .1102338
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2} 6.365332{col 33}{space 2} .6062531{col 44}{space 1}   10.50{col 53}{space 3}0.000{col 61}{space 4} 5.173622{col 74}{space 3} 7.557042
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Absorbed degrees of freedom:
+{res}{col 1}{text}{hline 18}{c TT}{hline 12}{hline 12}{hline 14}{hline 1}{c TRC}
+{col 1}{text}      Absorbed FE{col 19}{c |} Categories{col 32} - Redundant{col 44}  = Num. Coefs{col 59}{c |}
+{res}{col 1}{text}{hline 18}{c +}{hline 12}{hline 12}{hline 14}{hline 1}{c RT}
+{col 1}{text} IndustriaTiempo2{col 19}{c |}{space 1}       15{col 32}{space 1}        0{col 44}{result}{space 1}       15{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}           ubigeo{col 19}{c |}{space 1}       62{col 32}{space 1}        1{col 44}{result}{space 1}       61{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}{hline 18}{c BT}{hline 12}{hline 12}{hline 14}{hline 1}{c BRC}
+{res}{txt}
+{com}. 
+. *regresiones de todas las empresas de media alta intensidad tecnologica
+. reghdfe logprod logtrabaj logcapital logmaterial logCantidadEmpresas if MediaAltaTec==1 , abs(IndustriaTiempo2 ) vce(robust)
+{res}{txt}({browse "http://scorreia.com/research/hdfe.pdf":MWFE estimator} converged in 1 iterations)
+{res}
+{txt}HDFE Linear regression{col 51}Number of obs{col 67}= {res}     1,705
+{txt}Absorbing 1 HDFE group{col 51}F({res}   4{txt},{res}   1676{txt}){col 67}= {res}    723.41
+{txt}{col 51}Prob > F{col 67}= {res}    0.0000
+{txt}{col 51}R-squared{col 67}= {res}    0.7203
+{txt}{col 51}Adj R-squared{col 67}= {res}    0.7156
+{txt}{col 51}Within R-sq.{col 67}= {res}    0.6653
+{txt}{col 51}Root MSE{col 67}= {res}    1.2456
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 21}{c |}{col 33}    Robust
+{col 1}            logprod{col 21}{c |}      Coef.{col 33}   Std. Err.{col 45}      t{col 53}   P>|t|{col 61}     [95% Con{col 74}f. Interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}logtrabaj {c |}{col 21}{res}{space 2} .4746203{col 33}{space 2}    .0401{col 44}{space 1}   11.84{col 53}{space 3}0.000{col 61}{space 4}  .395969{col 74}{space 3} .5532716
+{txt}{space 9}logcapital {c |}{col 21}{res}{space 2}  .166549{col 33}{space 2} .0249107{col 44}{space 1}    6.69{col 53}{space 3}0.000{col 61}{space 4} .1176897{col 74}{space 3} .2154082
+{txt}{space 8}logmaterial {c |}{col 21}{res}{space 2} .4196488{col 33}{space 2} .0350611{col 44}{space 1}   11.97{col 53}{space 3}0.000{col 61}{space 4} .3508807{col 74}{space 3} .4884169
+{txt}logCantidadEmpresas {c |}{col 21}{res}{space 2}-.0787499{col 33}{space 2} .0311908{col 44}{space 1}   -2.52{col 53}{space 3}0.012{col 61}{space 4}-.1399269{col 74}{space 3}-.0175729
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2} 5.403575{col 33}{space 2} .4108644{col 44}{space 1}   13.15{col 53}{space 3}0.000{col 61}{space 4} 4.597713{col 74}{space 3} 6.209436
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Absorbed degrees of freedom:
+{res}{col 1}{text}{hline 18}{c TT}{hline 12}{hline 12}{hline 14}{hline 1}{c TRC}
+{col 1}{text}      Absorbed FE{col 19}{c |} Categories{col 32} - Redundant{col 44}  = Num. Coefs{col 59}{c |}
+{res}{col 1}{text}{hline 18}{c +}{hline 12}{hline 12}{hline 14}{hline 1}{c RT}
+{col 1}{text} IndustriaTiempo2{col 19}{c |}{space 1}       25{col 32}{space 1}        0{col 44}{result}{space 1}       25{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}{hline 18}{c BT}{hline 12}{hline 12}{hline 14}{hline 1}{c BRC}
+{res}{txt}
+{com}. reghdfe logprod logtrabaj logcapital logmaterial logCantidadEmpresas if MediaAltaTec==1 , abs(IndustriaTiempo2 ubigeo) vce(robust)
+{res}{txt}(dropped 80 {browse "http://scorreia.com/research/singletons.pdf":singleton observations})
+{res}{txt}({browse "http://scorreia.com/research/hdfe.pdf":MWFE estimator} converged in 12 iterations)
+{res}
+{txt}HDFE Linear regression{col 51}Number of obs{col 67}= {res}     1,625
+{txt}Absorbing 2 HDFE groups{col 51}F({res}   4{txt},{res}   1450{txt}){col 67}= {res}    582.21
+{txt}{col 51}Prob > F{col 67}= {res}    0.0000
+{txt}{col 51}R-squared{col 67}= {res}    0.7463
+{txt}{col 51}Adj R-squared{col 67}= {res}    0.7158
+{txt}{col 51}Within R-sq.{col 67}= {res}    0.6514
+{txt}{col 51}Root MSE{col 67}= {res}    1.2442
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 21}{c |}{col 33}    Robust
+{col 1}            logprod{col 21}{c |}      Coef.{col 33}   Std. Err.{col 45}      t{col 53}   P>|t|{col 61}     [95% Con{col 74}f. Interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}logtrabaj {c |}{col 21}{res}{space 2} .4421805{col 33}{space 2} .0415698{col 44}{space 1}   10.64{col 53}{space 3}0.000{col 61}{space 4} .3606371{col 74}{space 3}  .523724
+{txt}{space 9}logcapital {c |}{col 21}{res}{space 2} .1755422{col 33}{space 2} .0272303{col 44}{space 1}    6.45{col 53}{space 3}0.000{col 61}{space 4} .1221273{col 74}{space 3} .2289572
+{txt}{space 8}logmaterial {c |}{col 21}{res}{space 2} .4253917{col 33}{space 2} .0387775{col 44}{space 1}   10.97{col 53}{space 3}0.000{col 61}{space 4} .3493257{col 74}{space 3} .5014577
+{txt}logCantidadEmpresas {c |}{col 21}{res}{space 2}-.1005949{col 33}{space 2}  .046027{col 44}{space 1}   -2.19{col 53}{space 3}0.029{col 61}{space 4}-.1908816{col 74}{space 3}-.0103082
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2} 5.350393{col 33}{space 2} .4712827{col 44}{space 1}   11.35{col 53}{space 3}0.000{col 61}{space 4} 4.425924{col 74}{space 3} 6.274862
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Absorbed degrees of freedom:
+{res}{col 1}{text}{hline 18}{c TT}{hline 12}{hline 12}{hline 14}{hline 1}{c TRC}
+{col 1}{text}      Absorbed FE{col 19}{c |} Categories{col 32} - Redundant{col 44}  = Num. Coefs{col 59}{c |}
+{res}{col 1}{text}{hline 18}{c +}{hline 12}{hline 12}{hline 14}{hline 1}{c RT}
+{col 1}{text} IndustriaTiempo2{col 19}{c |}{space 1}       25{col 32}{space 1}        0{col 44}{result}{space 1}       25{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}           ubigeo{col 19}{c |}{space 1}      147{col 32}{space 1}        1{col 44}{result}{space 1}      146{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}{hline 18}{c BT}{hline 12}{hline 12}{hline 14}{hline 1}{c BRC}
+{res}{txt}
+{com}. 
+. *regresiones de todas las empresas de media baja intensidad tecnologica
+. reghdfe logprod logtrabaj logcapital logmaterial logCantidadEmpresas if MediaBajaTec==1 , abs(IndustriaTiempo2 IRUC) vce(robust)
+{res}{txt}(dropped 845 {browse "http://scorreia.com/research/singletons.pdf":singleton observations})
+{res}{txt}({browse "http://scorreia.com/research/hdfe.pdf":MWFE estimator} converged in 17 iterations)
+{res}
+{txt}HDFE Linear regression{col 51}Number of obs{col 67}= {res}     1,950
+{txt}Absorbing 2 HDFE groups{col 51}F({res}   4{txt},{res}   1333{txt}){col 67}= {res}     31.72
+{txt}{col 51}Prob > F{col 67}= {res}    0.0000
+{txt}{col 51}R-squared{col 67}= {res}    0.8863
+{txt}{col 51}Adj R-squared{col 67}= {res}    0.8338
+{txt}{col 51}Within R-sq.{col 67}= {res}    0.2053
+{txt}{col 51}Root MSE{col 67}= {res}    0.8547
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 21}{c |}{col 33}    Robust
+{col 1}            logprod{col 21}{c |}      Coef.{col 33}   Std. Err.{col 45}      t{col 53}   P>|t|{col 61}     [95% Con{col 74}f. Interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}logtrabaj {c |}{col 21}{res}{space 2} .3640466{col 33}{space 2} .0718112{col 44}{space 1}    5.07{col 53}{space 3}0.000{col 61}{space 4} .2231713{col 74}{space 3} .5049219
+{txt}{space 9}logcapital {c |}{col 21}{res}{space 2} .0426325{col 33}{space 2}  .091294{col 44}{space 1}    0.47{col 53}{space 3}0.641{col 61}{space 4}-.1364631{col 74}{space 3} .2217281
+{txt}{space 8}logmaterial {c |}{col 21}{res}{space 2} .2627893{col 33}{space 2} .0457114{col 44}{space 1}    5.75{col 53}{space 3}0.000{col 61}{space 4} .1731151{col 74}{space 3} .3524634
+{txt}logCantidadEmpresas {c |}{col 21}{res}{space 2}  .008437{col 33}{space 2} .0324351{col 44}{space 1}    0.26{col 53}{space 3}0.795{col 61}{space 4}-.0551925{col 74}{space 3} .0720665
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2} 9.974931{col 33}{space 2} 1.338497{col 44}{space 1}    7.45{col 53}{space 3}0.000{col 61}{space 4} 7.349141{col 74}{space 3} 12.60072
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Absorbed degrees of freedom:
+{res}{col 1}{text}{hline 18}{c TT}{hline 12}{hline 12}{hline 14}{hline 1}{c TRC}
+{col 1}{text}      Absorbed FE{col 19}{c |} Categories{col 32} - Redundant{col 44}  = Num. Coefs{col 59}{c |}
+{res}{col 1}{text}{hline 18}{c +}{hline 12}{hline 12}{hline 14}{hline 1}{c RT}
+{col 1}{text} IndustriaTiempo2{col 19}{c |}{space 1}       25{col 32}{space 1}        0{col 44}{result}{space 1}       25{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}             IRUC{col 19}{c |}{space 1}      589{col 32}{space 1}        1{col 44}{result}{space 1}      588{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}{hline 18}{c BT}{hline 12}{hline 12}{hline 14}{hline 1}{c BRC}
+{res}{txt}
+{com}. reghdfe logprod logtrabaj logcapital logmaterial logCantidadEmpresas if MediaBajaTec==1 , abs(IndustriaTiempo2 ubigeo) vce(robust)
+{res}{txt}(dropped 96 {browse "http://scorreia.com/research/singletons.pdf":singleton observations})
+{res}{txt}({browse "http://scorreia.com/research/hdfe.pdf":MWFE estimator} converged in 11 iterations)
+{res}
+{txt}HDFE Linear regression{col 51}Number of obs{col 67}= {res}     2,699
+{txt}Absorbing 2 HDFE groups{col 51}F({res}   4{txt},{res}   2487{txt}){col 67}= {res}   1301.89
+{txt}{col 51}Prob > F{col 67}= {res}    0.0000
+{txt}{col 51}R-squared{col 67}= {res}    0.7613
+{txt}{col 51}Adj R-squared{col 67}= {res}    0.7411
+{txt}{col 51}Within R-sq.{col 67}= {res}    0.7041
+{txt}{col 51}Root MSE{col 67}= {res}    1.1772
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 21}{c |}{col 33}    Robust
+{col 1}            logprod{col 21}{c |}      Coef.{col 33}   Std. Err.{col 45}      t{col 53}   P>|t|{col 61}     [95% Con{col 74}f. Interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}logtrabaj {c |}{col 21}{res}{space 2} .4926771{col 33}{space 2} .0341391{col 44}{space 1}   14.43{col 53}{space 3}0.000{col 61}{space 4} .4257332{col 74}{space 3} .5596211
+{txt}{space 9}logcapital {c |}{col 21}{res}{space 2} .1632454{col 33}{space 2} .0237571{col 44}{space 1}    6.87{col 53}{space 3}0.000{col 61}{space 4} .1166596{col 74}{space 3} .2098312
+{txt}{space 8}logmaterial {c |}{col 21}{res}{space 2} .4136843{col 33}{space 2} .0317649{col 44}{space 1}   13.02{col 53}{space 3}0.000{col 61}{space 4}  .351396{col 74}{space 3} .4759726
+{txt}logCantidadEmpresas {c |}{col 21}{res}{space 2}-.1033431{col 33}{space 2} .0292634{col 44}{space 1}   -3.53{col 53}{space 3}0.000{col 61}{space 4}-.1607263{col 74}{space 3}  -.04596
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2} 5.516756{col 33}{space 2} .3537871{col 44}{space 1}   15.59{col 53}{space 3}0.000{col 61}{space 4} 4.823008{col 74}{space 3} 6.210503
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Absorbed degrees of freedom:
+{res}{col 1}{text}{hline 18}{c TT}{hline 12}{hline 12}{hline 14}{hline 1}{c TRC}
+{col 1}{text}      Absorbed FE{col 19}{c |} Categories{col 32} - Redundant{col 44}  = Num. Coefs{col 59}{c |}
+{res}{col 1}{text}{hline 18}{c +}{hline 12}{hline 12}{hline 14}{hline 1}{c RT}
+{col 1}{text} IndustriaTiempo2{col 19}{c |}{space 1}       25{col 32}{space 1}        0{col 44}{result}{space 1}       25{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}           ubigeo{col 19}{c |}{space 1}      184{col 32}{space 1}        1{col 44}{result}{space 1}      183{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}{hline 18}{c BT}{hline 12}{hline 12}{hline 14}{hline 1}{c BRC}
+{res}{txt}
+{com}. 
+. *regresiones de todas las empresas de  baja intensidad tecnologica
+. reghdfe logprod logtrabaj logcapital logmaterial logCantidadEmpresas if BajaTec==1 , abs(IndustriaTiempo2 IRUC) vce(robust)
+{res}{txt}(dropped 1477 {browse "http://scorreia.com/research/singletons.pdf":singleton observations})
+{res}{txt}({browse "http://scorreia.com/research/hdfe.pdf":MWFE estimator} converged in 28 iterations)
+{res}
+{txt}HDFE Linear regression{col 51}Number of obs{col 67}= {res}     2,581
+{txt}Absorbing 2 HDFE groups{col 51}F({res}   4{txt},{res}   1694{txt}){col 67}= {res}     33.11
+{txt}{col 51}Prob > F{col 67}= {res}    0.0000
+{txt}{col 51}R-squared{col 67}= {res}    0.9031
+{txt}{col 51}Adj R-squared{col 67}= {res}    0.8523
+{txt}{col 51}Within R-sq.{col 67}= {res}    0.2314
+{txt}{col 51}Root MSE{col 67}= {res}    0.8193
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 21}{c |}{col 33}    Robust
+{col 1}            logprod{col 21}{c |}      Coef.{col 33}   Std. Err.{col 45}      t{col 53}   P>|t|{col 61}     [95% Con{col 74}f. Interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}logtrabaj {c |}{col 21}{res}{space 2} .3512133{col 33}{space 2} .0607797{col 44}{space 1}    5.78{col 53}{space 3}0.000{col 61}{space 4} .2320022{col 74}{space 3} .4704244
+{txt}{space 9}logcapital {c |}{col 21}{res}{space 2} .0318073{col 33}{space 2} .0530204{col 44}{space 1}    0.60{col 53}{space 3}0.549{col 61}{space 4}-.0721851{col 74}{space 3} .1357997
+{txt}{space 8}logmaterial {c |}{col 21}{res}{space 2} .2919505{col 33}{space 2} .0368594{col 44}{space 1}    7.92{col 53}{space 3}0.000{col 61}{space 4} .2196558{col 74}{space 3} .3642452
+{txt}logCantidadEmpresas {c |}{col 21}{res}{space 2}  .001074{col 33}{space 2} .0269257{col 44}{space 1}    0.04{col 53}{space 3}0.968{col 61}{space 4} -.051737{col 74}{space 3} .0538851
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2} 9.652442{col 33}{space 2} .9175458{col 44}{space 1}   10.52{col 53}{space 3}0.000{col 61}{space 4}   7.8528{col 74}{space 3} 11.45209
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Absorbed degrees of freedom:
+{res}{col 1}{text}{hline 18}{c TT}{hline 12}{hline 12}{hline 14}{hline 1}{c TRC}
+{col 1}{text}      Absorbed FE{col 19}{c |} Categories{col 32} - Redundant{col 44}  = Num. Coefs{col 59}{c |}
+{res}{col 1}{text}{hline 18}{c +}{hline 12}{hline 12}{hline 14}{hline 1}{c RT}
+{col 1}{text} IndustriaTiempo2{col 19}{c |}{space 1}       45{col 32}{space 1}        0{col 44}{result}{space 1}       45{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}             IRUC{col 19}{c |}{space 1}      839{col 32}{space 1}        1{col 44}{result}{space 1}      838{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}{hline 18}{c BT}{hline 12}{hline 12}{hline 14}{hline 1}{c BRC}
+{res}{txt}
+{com}. reghdfe logprod logtrabaj logcapital logmaterial logCantidadEmpresas if BajaTec==1 , abs(IndustriaTiempo2 ubigeo) vce(robust)
+{res}{txt}(dropped 65 {browse "http://scorreia.com/research/singletons.pdf":singleton observations})
+{res}{txt}({browse "http://scorreia.com/research/hdfe.pdf":MWFE estimator} converged in 12 iterations)
+{res}
+{txt}HDFE Linear regression{col 51}Number of obs{col 67}= {res}     3,993
+{txt}Absorbing 2 HDFE groups{col 51}F({res}   4{txt},{res}   3698{txt}){col 67}= {res}   2028.08
+{txt}{col 51}Prob > F{col 67}= {res}    0.0000
+{txt}{col 51}R-squared{col 67}= {res}    0.7596
+{txt}{col 51}Adj R-squared{col 67}= {res}    0.7405
+{txt}{col 51}Within R-sq.{col 67}= {res}    0.6849
+{txt}{col 51}Root MSE{col 67}= {res}    1.1645
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 21}{c |}{col 33}    Robust
+{col 1}            logprod{col 21}{c |}      Coef.{col 33}   Std. Err.{col 45}      t{col 53}   P>|t|{col 61}     [95% Con{col 74}f. Interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}logtrabaj {c |}{col 21}{res}{space 2} .4481783{col 33}{space 2} .0250063{col 44}{space 1}   17.92{col 53}{space 3}0.000{col 61}{space 4} .3991507{col 74}{space 3} .4972058
+{txt}{space 9}logcapital {c |}{col 21}{res}{space 2} .1391081{col 33}{space 2}  .015645{col 44}{space 1}    8.89{col 53}{space 3}0.000{col 61}{space 4} .1084344{col 74}{space 3} .1697817
+{txt}{space 8}logmaterial {c |}{col 21}{res}{space 2} .4351676{col 33}{space 2} .0269792{col 44}{space 1}   16.13{col 53}{space 3}0.000{col 61}{space 4}  .382272{col 74}{space 3} .4880632
+{txt}logCantidadEmpresas {c |}{col 21}{res}{space 2}-.0517287{col 33}{space 2} .0218025{col 44}{space 1}   -2.37{col 53}{space 3}0.018{col 61}{space 4}-.0944748{col 74}{space 3}-.0089825
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2} 5.599861{col 33}{space 2} .2825213{col 44}{space 1}   19.82{col 53}{space 3}0.000{col 61}{space 4} 5.045949{col 74}{space 3} 6.153774
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Absorbed degrees of freedom:
+{res}{col 1}{text}{hline 18}{c TT}{hline 12}{hline 12}{hline 14}{hline 1}{c TRC}
+{col 1}{text}      Absorbed FE{col 19}{c |} Categories{col 32} - Redundant{col 44}  = Num. Coefs{col 59}{c |}
+{res}{col 1}{text}{hline 18}{c +}{hline 12}{hline 12}{hline 14}{hline 1}{c RT}
+{col 1}{text} IndustriaTiempo2{col 19}{c |}{space 1}       45{col 32}{space 1}        0{col 44}{result}{space 1}       45{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}           ubigeo{col 19}{c |}{space 1}      247{col 32}{space 1}        1{col 44}{result}{space 1}      246{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}{hline 18}{c BT}{hline 12}{hline 12}{hline 14}{hline 1}{c BRC}
+{res}{txt}
+{com}. 
+. 
+. *regresiones de todas las empresas de alta, media alta y media baja intensidad tecnologica
+. reghdfe logprod logtrabaj logcapital logmaterial logCantidadEmpresas if BajaTec==0  , abs(IndustriaTiempo2  IRUC) vce(robust)
+{res}{txt}(dropped 1369 {browse "http://scorreia.com/research/singletons.pdf":singleton observations})
+{res}{txt}({browse "http://scorreia.com/research/hdfe.pdf":MWFE estimator} converged in 34 iterations)
+{res}
+{txt}HDFE Linear regression{col 51}Number of obs{col 67}= {res}     3,666
+{txt}Absorbing 2 HDFE groups{col 51}F({res}   4{txt},{res}   2467{txt}){col 67}= {res}     42.96
+{txt}{col 51}Prob > F{col 67}= {res}    0.0000
+{txt}{col 51}R-squared{col 67}= {res}    0.8861
+{txt}{col 51}Adj R-squared{col 67}= {res}    0.8308
+{txt}{col 51}Within R-sq.{col 67}= {res}    0.1701
+{txt}{col 51}Root MSE{col 67}= {res}    0.8754
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 21}{c |}{col 33}    Robust
+{col 1}            logprod{col 21}{c |}      Coef.{col 33}   Std. Err.{col 45}      t{col 53}   P>|t|{col 61}     [95% Con{col 74}f. Interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}logtrabaj {c |}{col 21}{res}{space 2} .2896941{col 33}{space 2} .0556467{col 44}{space 1}    5.21{col 53}{space 3}0.000{col 61}{space 4}  .180575{col 74}{space 3} .3988131
+{txt}{space 9}logcapital {c |}{col 21}{res}{space 2} .0591802{col 33}{space 2} .0583049{col 44}{space 1}    1.02{col 53}{space 3}0.310{col 61}{space 4}-.0551515{col 74}{space 3} .1735118
+{txt}{space 8}logmaterial {c |}{col 21}{res}{space 2} .2557505{col 33}{space 2} .0309065{col 44}{space 1}    8.27{col 53}{space 3}0.000{col 61}{space 4} .1951452{col 74}{space 3} .3163558
+{txt}logCantidadEmpresas {c |}{col 21}{res}{space 2} .0264628{col 33}{space 2} .0259951{col 44}{space 1}    1.02{col 53}{space 3}0.309{col 61}{space 4}-.0245116{col 74}{space 3} .0774371
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2}  10.0211{col 33}{space 2} .8858489{col 44}{space 1}   11.31{col 53}{space 3}0.000{col 61}{space 4} 8.284013{col 74}{space 3} 11.75818
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Absorbed degrees of freedom:
+{res}{col 1}{text}{hline 18}{c TT}{hline 12}{hline 12}{hline 14}{hline 1}{c TRC}
+{col 1}{text}      Absorbed FE{col 19}{c |} Categories{col 32} - Redundant{col 44}  = Num. Coefs{col 59}{c |}
+{res}{col 1}{text}{hline 18}{c +}{hline 12}{hline 12}{hline 14}{hline 1}{c RT}
+{col 1}{text} IndustriaTiempo2{col 19}{c |}{space 1}       65{col 32}{space 1}        0{col 44}{result}{space 1}       65{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}             IRUC{col 19}{c |}{space 1}     1131{col 32}{space 1}        1{col 44}{result}{space 1}     1130{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}{hline 18}{c BT}{hline 12}{hline 12}{hline 14}{hline 1}{c BRC}
+{res}{txt}
+{com}.  
+. reghdfe logprod logtrabaj logcapital logmaterial logCantidadEmpresas if BajaTec==0 , abs(IndustriaTiempo2 ubigeo) vce(robust)
+{res}{txt}(dropped 91 {browse "http://scorreia.com/research/singletons.pdf":singleton observations})
+{res}{txt}({browse "http://scorreia.com/research/hdfe.pdf":MWFE estimator} converged in 12 iterations)
+{res}
+{txt}HDFE Linear regression{col 51}Number of obs{col 67}= {res}     4,944
+{txt}Absorbing 2 HDFE groups{col 51}F({res}   4{txt},{res}   4643{txt}){col 67}= {res}   2256.23
+{txt}{col 51}Prob > F{col 67}= {res}    0.0000
+{txt}{col 51}R-squared{col 67}= {res}    0.7502
+{txt}{col 51}Adj R-squared{col 67}= {res}    0.7340
+{txt}{col 51}Within R-sq.{col 67}= {res}    0.6859
+{txt}{col 51}Root MSE{col 67}= {res}    1.1960
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 21}{c |}{col 33}    Robust
+{col 1}            logprod{col 21}{c |}      Coef.{col 33}   Std. Err.{col 45}      t{col 53}   P>|t|{col 61}     [95% Con{col 74}f. Interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}logtrabaj {c |}{col 21}{res}{space 2} .4845807{col 33}{space 2} .0239225{col 44}{space 1}   20.26{col 53}{space 3}0.000{col 61}{space 4} .4376812{col 74}{space 3} .5314802
+{txt}{space 9}logcapital {c |}{col 21}{res}{space 2} .1652385{col 33}{space 2} .0162261{col 44}{space 1}   10.18{col 53}{space 3}0.000{col 61}{space 4} .1334276{col 74}{space 3} .1970493
+{txt}{space 8}logmaterial {c |}{col 21}{res}{space 2} .4126174{col 33}{space 2} .0218234{col 44}{space 1}   18.91{col 53}{space 3}0.000{col 61}{space 4} .3698331{col 74}{space 3} .4554017
+{txt}logCantidadEmpresas {c |}{col 21}{res}{space 2}-.0861092{col 33}{space 2}  .021589{col 44}{space 1}   -3.99{col 53}{space 3}0.000{col 61}{space 4}-.1284339{col 74}{space 3}-.0437845
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2} 5.496819{col 33}{space 2} .2504586{col 44}{space 1}   21.95{col 53}{space 3}0.000{col 61}{space 4} 5.005801{col 74}{space 3} 5.987837
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Absorbed degrees of freedom:
+{res}{col 1}{text}{hline 18}{c TT}{hline 12}{hline 12}{hline 14}{hline 1}{c TRC}
+{col 1}{text}      Absorbed FE{col 19}{c |} Categories{col 32} - Redundant{col 44}  = Num. Coefs{col 59}{c |}
+{res}{col 1}{text}{hline 18}{c +}{hline 12}{hline 12}{hline 14}{hline 1}{c RT}
+{col 1}{text} IndustriaTiempo2{col 19}{c |}{space 1}       65{col 32}{space 1}        0{col 44}{result}{space 1}       65{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}           ubigeo{col 19}{c |}{space 1}      233{col 32}{space 1}        1{col 44}{result}{space 1}      232{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}{hline 18}{c BT}{hline 12}{hline 12}{hline 14}{hline 1}{c BRC}
+{res}{txt}
+{com}. ////////////////////////////////////////////
+> **EXPORTAR REGRESIONES
+. reghdfe logprod logtrabaj logcapital logmaterial logCantidadEmpresas , abs(IndustriaTiempo2  ubigeo) vce(robust)
+{res}{txt}(dropped 71 {browse "http://scorreia.com/research/singletons.pdf":singleton observations})
+{res}{txt}({browse "http://scorreia.com/research/hdfe.pdf":MWFE estimator} converged in 11 iterations)
+{res}
+{txt}HDFE Linear regression{col 51}Number of obs{col 67}= {res}     9,070
+{txt}Absorbing 2 HDFE groups{col 51}F({res}   4{txt},{res}   8649{txt}){col 67}= {res}   4446.78
+{txt}{col 51}Prob > F{col 67}= {res}    0.0000
+{txt}{col 51}R-squared{col 67}= {res}    0.7479
+{txt}{col 51}Adj R-squared{col 67}= {res}    0.7357
+{txt}{col 51}Within R-sq.{col 67}= {res}    0.6837
+{txt}{col 51}Root MSE{col 67}= {res}    1.1861
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 21}{c |}{col 33}    Robust
+{col 1}            logprod{col 21}{c |}      Coef.{col 33}   Std. Err.{col 45}      t{col 53}   P>|t|{col 61}     [95% Con{col 74}f. Interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}logtrabaj {c |}{col 21}{res}{space 2} .4651682{col 33}{space 2} .0170144{col 44}{space 1}   27.34{col 53}{space 3}0.000{col 61}{space 4} .4318159{col 74}{space 3} .4985205
+{txt}{space 9}logcapital {c |}{col 21}{res}{space 2} .1545499{col 33}{space 2}  .011136{col 44}{space 1}   13.88{col 53}{space 3}0.000{col 61}{space 4} .1327208{col 74}{space 3} .1763791
+{txt}{space 8}logmaterial {c |}{col 21}{res}{space 2} .4216031{col 33}{space 2} .0166533{col 44}{space 1}   25.32{col 53}{space 3}0.000{col 61}{space 4} .3889586{col 74}{space 3} .4542476
+{txt}logCantidadEmpresas {c |}{col 21}{res}{space 2} -.057781{col 33}{space 2} .0146383{col 44}{space 1}   -3.95{col 53}{space 3}0.000{col 61}{space 4}-.0864755{col 74}{space 3}-.0290865
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2} 5.526078{col 33}{space 2} .1842215{col 44}{space 1}   30.00{col 53}{space 3}0.000{col 61}{space 4}  5.16496{col 74}{space 3} 5.887196
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Absorbed degrees of freedom:
+{res}{col 1}{text}{hline 18}{c TT}{hline 12}{hline 12}{hline 14}{hline 1}{c TRC}
+{col 1}{text}      Absorbed FE{col 19}{c |} Categories{col 32} - Redundant{col 44}  = Num. Coefs{col 59}{c |}
+{res}{col 1}{text}{hline 18}{c +}{hline 12}{hline 12}{hline 14}{hline 1}{c RT}
+{col 1}{text} IndustriaTiempo2{col 19}{c |}{space 1}      115{col 32}{space 1}        0{col 44}{result}{space 1}      115{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}           ubigeo{col 19}{c |}{space 1}      303{col 32}{space 1}        1{col 44}{result}{space 1}      302{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}{hline 18}{c BT}{hline 12}{hline 12}{hline 14}{hline 1}{c BRC}
+{res}{txt}
+{com}. outreg2 using regresion.doc, replace ctitle(Model 1)
+{txt}{stata `"shellout using `"regresion.doc"'"':regresion.doc}
+{browse `"D:\STATA LIMPIO\3_OUTPUT"' :dir}{com} : {txt}{stata `"seeout using "regresion.txt""':seeout}
+
+{com}. reghdfe logprod logtrabaj logcapital logmaterial logCantidadEmpresas if BajaTec==0  , abs(IndustriaTiempo2  ubigeo) vce(robust)
+{res}{txt}(dropped 91 {browse "http://scorreia.com/research/singletons.pdf":singleton observations})
+{res}{txt}({browse "http://scorreia.com/research/hdfe.pdf":MWFE estimator} converged in 12 iterations)
+{res}
+{txt}HDFE Linear regression{col 51}Number of obs{col 67}= {res}     4,944
+{txt}Absorbing 2 HDFE groups{col 51}F({res}   4{txt},{res}   4643{txt}){col 67}= {res}   2256.23
+{txt}{col 51}Prob > F{col 67}= {res}    0.0000
+{txt}{col 51}R-squared{col 67}= {res}    0.7502
+{txt}{col 51}Adj R-squared{col 67}= {res}    0.7340
+{txt}{col 51}Within R-sq.{col 67}= {res}    0.6859
+{txt}{col 51}Root MSE{col 67}= {res}    1.1960
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 21}{c |}{col 33}    Robust
+{col 1}            logprod{col 21}{c |}      Coef.{col 33}   Std. Err.{col 45}      t{col 53}   P>|t|{col 61}     [95% Con{col 74}f. Interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}logtrabaj {c |}{col 21}{res}{space 2} .4845807{col 33}{space 2} .0239225{col 44}{space 1}   20.26{col 53}{space 3}0.000{col 61}{space 4} .4376812{col 74}{space 3} .5314802
+{txt}{space 9}logcapital {c |}{col 21}{res}{space 2} .1652385{col 33}{space 2} .0162261{col 44}{space 1}   10.18{col 53}{space 3}0.000{col 61}{space 4} .1334276{col 74}{space 3} .1970493
+{txt}{space 8}logmaterial {c |}{col 21}{res}{space 2} .4126174{col 33}{space 2} .0218234{col 44}{space 1}   18.91{col 53}{space 3}0.000{col 61}{space 4} .3698331{col 74}{space 3} .4554017
+{txt}logCantidadEmpresas {c |}{col 21}{res}{space 2}-.0861092{col 33}{space 2}  .021589{col 44}{space 1}   -3.99{col 53}{space 3}0.000{col 61}{space 4}-.1284339{col 74}{space 3}-.0437845
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2} 5.496819{col 33}{space 2} .2504586{col 44}{space 1}   21.95{col 53}{space 3}0.000{col 61}{space 4} 5.005801{col 74}{space 3} 5.987837
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Absorbed degrees of freedom:
+{res}{col 1}{text}{hline 18}{c TT}{hline 12}{hline 12}{hline 14}{hline 1}{c TRC}
+{col 1}{text}      Absorbed FE{col 19}{c |} Categories{col 32} - Redundant{col 44}  = Num. Coefs{col 59}{c |}
+{res}{col 1}{text}{hline 18}{c +}{hline 12}{hline 12}{hline 14}{hline 1}{c RT}
+{col 1}{text} IndustriaTiempo2{col 19}{c |}{space 1}       65{col 32}{space 1}        0{col 44}{result}{space 1}       65{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}           ubigeo{col 19}{c |}{space 1}      233{col 32}{space 1}        1{col 44}{result}{space 1}      232{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}{hline 18}{c BT}{hline 12}{hline 12}{hline 14}{hline 1}{c BRC}
+{res}{txt}
+{com}. outreg2 using regresion.doc, append ctitle(Model 2)
+{txt}{stata `"shellout using `"regresion.doc"'"':regresion.doc}
+{browse `"D:\STATA LIMPIO\3_OUTPUT"' :dir}{com} : {txt}{stata `"seeout using "regresion.txt""':seeout}
+
+{com}. reghdfe logprod logtrabaj logcapital logmaterial logCantidadEmpresas if BajaTec==1 , abs(IndustriaTiempo2 ubigeo) vce(robust)
+{res}{txt}(dropped 65 {browse "http://scorreia.com/research/singletons.pdf":singleton observations})
+{res}{txt}({browse "http://scorreia.com/research/hdfe.pdf":MWFE estimator} converged in 12 iterations)
+{res}
+{txt}HDFE Linear regression{col 51}Number of obs{col 67}= {res}     3,993
+{txt}Absorbing 2 HDFE groups{col 51}F({res}   4{txt},{res}   3698{txt}){col 67}= {res}   2028.08
+{txt}{col 51}Prob > F{col 67}= {res}    0.0000
+{txt}{col 51}R-squared{col 67}= {res}    0.7596
+{txt}{col 51}Adj R-squared{col 67}= {res}    0.7405
+{txt}{col 51}Within R-sq.{col 67}= {res}    0.6849
+{txt}{col 51}Root MSE{col 67}= {res}    1.1645
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 21}{c |}{col 33}    Robust
+{col 1}            logprod{col 21}{c |}      Coef.{col 33}   Std. Err.{col 45}      t{col 53}   P>|t|{col 61}     [95% Con{col 74}f. Interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}logtrabaj {c |}{col 21}{res}{space 2} .4481783{col 33}{space 2} .0250063{col 44}{space 1}   17.92{col 53}{space 3}0.000{col 61}{space 4} .3991507{col 74}{space 3} .4972058
+{txt}{space 9}logcapital {c |}{col 21}{res}{space 2} .1391081{col 33}{space 2}  .015645{col 44}{space 1}    8.89{col 53}{space 3}0.000{col 61}{space 4} .1084344{col 74}{space 3} .1697817
+{txt}{space 8}logmaterial {c |}{col 21}{res}{space 2} .4351676{col 33}{space 2} .0269792{col 44}{space 1}   16.13{col 53}{space 3}0.000{col 61}{space 4}  .382272{col 74}{space 3} .4880632
+{txt}logCantidadEmpresas {c |}{col 21}{res}{space 2}-.0517287{col 33}{space 2} .0218025{col 44}{space 1}   -2.37{col 53}{space 3}0.018{col 61}{space 4}-.0944748{col 74}{space 3}-.0089825
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2} 5.599861{col 33}{space 2} .2825213{col 44}{space 1}   19.82{col 53}{space 3}0.000{col 61}{space 4} 5.045949{col 74}{space 3} 6.153774
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Absorbed degrees of freedom:
+{res}{col 1}{text}{hline 18}{c TT}{hline 12}{hline 12}{hline 14}{hline 1}{c TRC}
+{col 1}{text}      Absorbed FE{col 19}{c |} Categories{col 32} - Redundant{col 44}  = Num. Coefs{col 59}{c |}
+{res}{col 1}{text}{hline 18}{c +}{hline 12}{hline 12}{hline 14}{hline 1}{c RT}
+{col 1}{text} IndustriaTiempo2{col 19}{c |}{space 1}       45{col 32}{space 1}        0{col 44}{result}{space 1}       45{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}           ubigeo{col 19}{c |}{space 1}      247{col 32}{space 1}        1{col 44}{result}{space 1}      246{col 58}{text} {col 59}{c |}
+{res}{col 1}{text}{hline 18}{c BT}{hline 12}{hline 12}{hline 14}{hline 1}{c BRC}
+{res}{txt}
+{com}. outreg2 using regresion.doc, append ctitle(Model 3)
+{txt}{stata `"shellout using `"regresion.doc"'"':regresion.doc}
+{browse `"D:\STATA LIMPIO\3_OUTPUT"' :dir}{com} : {txt}{stata `"seeout using "regresion.txt""':seeout}
+
+{com}. 
+. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}D:\STATA LIMPIO\3_OUTPUT\regresiones.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res} 9 Jan 2023, 21:46:15
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}
