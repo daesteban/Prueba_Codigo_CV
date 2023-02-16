@@ -7,4 +7,6 @@ Estos códigos estan realizados para **Jupyter Notebook**. Solo estan publicados
 
 [2_Webscraping_Proinversion_Cronograma_Docs.ipynb](https://github.com/dest18/Prueba_Codigo_CV/blob/main/Python/Webscraping%20PROINVERSION/2_Webscraping_Proinversion_Cronograma_Docs.ipynb)
 
+Proyecto proximo a publicar.
+
 Estos códigos fueron realizados totalmente por mi persona. 
