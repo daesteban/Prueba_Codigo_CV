@@ -10,7 +10,7 @@ Este proyecto fue realizado para el curso de Economía Urbana del ciclo 2022-0 e
 
 # Output
 - [Tabla principal de resultados](https://github.com/dest18/Prueba_Codigo_CV/blob/main/Stata/Proyecto%20Aglomeraci%C3%B3n%20Empresarial%20e%20Intensidad%20Tecnol%C3%B3gica/3_OUTPUT/regresion%20resultado.pdf)
-- [Logs de Stata](https://github.com/dest18/Prueba_Codigo_CV/blob/main/Stata/Proyecto%20Aglomeraci%C3%B3n%20Empresarial%20e%20Intensidad%20Tecnol%C3%B3gica/3_OUTPUT/regresiones.smcl)
+- [Logs de Stata](https://github.com/dest18/Prueba_Codigo_CV/blob/main/Stata/Proyecto%20Aglomeraci%C3%B3n%20Empresarial%20e%20Intensidad%20Tecnol%C3%B3gica/3_OUTPUT/regresiones.pdf)
 
 # Disclaimer
 El código fue realizado totalmente por mi persona.
