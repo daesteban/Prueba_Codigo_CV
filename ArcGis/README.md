@@ -9,4 +9,8 @@ Entre los mapas tenemos:
 - [Mapa de Clientes Potenciales](https://github.com/dest18/Prueba_Codigo_CV/blob/main/ArcGis/Mapa%20de%20clientes%20potenciales.png)
 - [Mapa de Escueles de Lima Metropolitana por Tipo de Gestión](https://github.com/dest18/Prueba_Codigo_CV/blob/main/ArcGis/Mapa%20de%20escuelas%20de%20Lima%20Metropolitana%20por%20tipo%20de%20gesti%C3%B3n.png)
 
+También se presenta un gif de la evolución de la precitación durante los meses de 2020 en un mapa de distritos del Perú.
+
+- [Mapa de Precipitación en los distritos de Perú en 2020](https://github.com/dest18/Prueba_Codigo_CV/blob/main/ArcGis/Mapa%20de%20Precipitacion%202020.gif)
+
 Los mapas y su manipulación de los datos fue realizado totalmente por mi persona.
