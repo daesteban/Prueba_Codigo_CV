@@ -7,5 +7,7 @@ Se presenta ejemplos de códigos en Python, R y Stata junto a un proyecto realiz
 3. [R](https://github.com/dest18/Prueba_Codigo_CV/tree/main/R)
 4. [ARCGIS](https://github.com/dest18/Prueba_Codigo_CV/tree/main/ArcGis)
 
+Desarrollado por Diego Esteban Quispe.
+Contacto: daesteban@pucp.edu.pe
 
 OJO: El código de R y Python esta realizado en Jupyter Notebooks.
