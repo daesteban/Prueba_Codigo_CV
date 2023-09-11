@@ -2,7 +2,7 @@
 En esta parte se presenta un trabajo sobre un **mapa de las concesiones viales de la Red Vial Nacional para Diciembre de 2022**, junto a distintos mapas realizados durante en curso de ArcGis en 2020.
 
 Entre los mapas tenemos:
-- [Mapa de las concesiones viales de la Red Vial Nacional para Diciembre de 2022](https://github.com/dest18/Prueba_Codigo_CV/blob/main/ArcGis/concesiones%20viales.pdf)
+- [Mapa de las concesiones viales de la Red Vial Nacional para Diciembre de 2022](https://github.com/dest18/Prueba_Codigo_CV/blob/main/ArcGis/Mapa%20de%20Concesiones%20Viales.pdf)
 - [Mapa de Deforestación y ANP](https://github.com/dest18/Prueba_Codigo_CV/blob/main/ArcGis/Mapa%20de%20Deforestacion%20y%20ANP.png)
 - [Mapa de Deforestación](https://github.com/dest18/Prueba_Codigo_CV/blob/main/ArcGis/Mapa%20de%20Deforestaci%C3%B3n%202001-2018.png)
 - [Mapa de Establecimientos de Salud en Lima y Junín](https://github.com/dest18/Prueba_Codigo_CV/blob/main/ArcGis/Mapa%20de%20Establecimientos%20de%20Salud%20en%20Lima%20y%20Jun%C3%ADn%20por%20Categor%C3%ADa.png)
